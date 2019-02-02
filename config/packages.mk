@@ -39,7 +39,8 @@ PRODUCT_PACKAGES += \
     ContactsThemeDark \
     DialerThemeDark \
     FilesThemeDark \
-    UpdaterDark
+    UpdaterDark \
+    WellbeingDark
 
 # Themes Black
 PRODUCT_PACKAGES += \
@@ -49,7 +50,18 @@ PRODUCT_PACKAGES += \
     ContactsThemeBlack \
     DialerThemeBlack \
     FilesThemeBlack \
-    UpdaterBlack
+    UpdaterBlack \
+    WellbeingBlack
+
+# Themes Ancient
+PRODUCT_PACKAGES += \
+    SettingsAncientTheme \
+    SystemAncientTheme \
+    SystemUIAncientTheme \
+    ContactsThemeAncient \
+    DialerThemeAncient \
+    FilesThemeAncient \
+    WellbeingAncient
 
 # Accents
 PRODUCT_PACKAGES += \
