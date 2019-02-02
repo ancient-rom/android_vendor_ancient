@@ -1,7 +1,7 @@
 add_json_str_omitempty = $(if $(strip $(2)),$(call add_json_str, $(1), $(2)))
 
-# Insert new variables inside the Superior structure
-_contents := $(_contents)    "Superior":{$(newline)
+# Insert new variables inside the Ancient structure
+_contents := $(_contents)    "Ancient":{$(newline)
 
 # Target variables default values
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS ?= 0

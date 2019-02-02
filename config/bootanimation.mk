@@ -23,8 +23,8 @@ TARGET_BOOTANIMATION_480P := $(shell \
 # Bootanimation
 ifeq ($(TARGET_BOOTANIMATION_480P),true)
 PRODUCT_COPY_FILES += \
-    vendor/superior/prebuilt/common/bootanimation/bootanimation-480p.zip:system/media/bootanimation.zip
+    vendor/ancient/prebuilt/common/bootanimation/bootanimation-480p.zip:system/media/bootanimation.zip
 else
 PRODUCT_COPY_FILES += \
-    vendor/superior/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+    vendor/ancient/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 endif

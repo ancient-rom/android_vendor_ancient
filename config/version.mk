@@ -13,52 +13,52 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#Superior OS Versioning :
-SUPERIOR_MOD_VERSION = Destructor
+#Ancient OS Versioning :
+ANCIENT_MOD_VERSION = Mlehoy
 
-ifndef SUPERIOR_BUILD_TYPE
-    SUPERIOR_BUILD_TYPE := UNOFFICIAL
+ifndef ANCIENT_BUILD_TYPE
+    ANCIENT_BUILD_TYPE := KW SUPER
 endif
 
 # Test Build Tag
-ifeq ($(SUPERIOR_TEST),true)
-    SUPERIOR_BUILD_TYPE := DEVELOPER
+ifeq ($(ANCIENT_TEST),true)
+    ANCIENT_BUILD_TYPE := DEVELOPER
 endif
 
 CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
 DATE := $(shell date -u +%Y%m%d)
 CUSTOM_BUILD_DATE := $(DATE)-$(shell date -u +%H%M)
 
-ifeq ($(SUPERIOR_OFFICIAL), true)
-   LIST = $(shell curl -s https://raw.githubusercontent.com/SuperiorOS/android_vendor_superior/pie/superior.devices)
+ifeq ($(ANCIENT_OFFICIAL), true)
+   LIST = $(shell curl -s https://raw.githubusercontent.com/ancient-rom/android_vendor_ancient/pie/ancient.devices)
    FOUND_DEVICE =  $(filter $(CURRENT_DEVICE), $(LIST))
     ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
       IS_OFFICIAL=true
-      SUPERIOR_BUILD_TYPE := OFFICIAL
+      ANCIENT_BUILD_TYPE := ORI
      
 PRODUCT_PACKAGES += \
     Updater
 	
     endif
     ifneq ($(IS_OFFICIAL), true)
-       SUPERIOR_BUILD_TYPE := UNOFFICIAL
+       ANCIENT_BUILD_TYPE := KW SUPER
        $(error Device is not official "$(FOUND)")
     endif
 endif
 
-TARGET_PRODUCT_SHORT := $(subst superior_,,$(CUSTOM_BUILD))
+TARGET_PRODUCT_SHORT := $(subst ancient_,,$(CUSTOM_BUILD))
 
-SUPERIOR_VERSION := SuperiorOS-$(SUPERIOR_MOD_VERSION)-$(CURRENT_DEVICE)-$(SUPERIOR_BUILD_TYPE)-$(CUSTOM_BUILD_DATE)
+ANCIENT_VERSION := ancient-rom-$(ANCIENT_MOD_VERSION)-$(CURRENT_DEVICE)-$(ANCIENT_BUILD_TYPE)-$(CUSTOM_BUILD_DATE)
 
-SUPERIOR_FINGERPRINT := SuperiorOS/$(SUPERIOR_MOD_VERSION)/$(PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(CUSTOM_BUILD_DATE)
-
-PRODUCT_GENERIC_PROPERTIES += \
-  ro.superior.version=$(SUPERIOR_VERSION) \
-  ro.superior.releasetype=$(SUPERIOR_BUILD_TYPE) \
-  ro.modversion=$(SUPERIOR_MOD_VERSION)
-
-SUPERIOR_DISPLAY_VERSION := SuperiorOS-$(SUPERIOR_MOD_VERSION)-$(SUPERIOR_BUILD_TYPE)
+ANCIENT_FINGERPRINT := ancient-rom/$(ANCIENT_MOD_VERSION)/$(PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(CUSTOM_BUILD_DATE)
 
 PRODUCT_GENERIC_PROPERTIES += \
-  ro.superior.display.version=$(SUPERIOR_DISPLAY_VERSION)\
-  ro.superior.fingerprint=$(SUPERIOR_FINGERPRINT)
+  ro.ancient.version=$(ANCIENT_VERSION) \
+  ro.ancient.releasetype=$(ANCIENT_BUILD_TYPE) \
+  ro.modversion=$(ANCIENT_MOD_VERSION)
+
+ANCIENT_DISPLAY_VERSION := ancient-rom-$(ANCIENT_MOD_VERSION)-$(ANCIENT_BUILD_TYPE)
+
+PRODUCT_GENERIC_PROPERTIES += \
+  ro.ancient.display.version=$(ANCIENT_DISPLAY_VERSION)\
+  ro.ancient.fingerprint=$(ANCIENT_FINGERPRINT)

@@ -54,14 +54,14 @@ PRODUCT_PACKAGES += \
     FilesThemeBlack \
     UpdaterBlack
 
-# Themes Superior
+# Themes Ancient
 PRODUCT_PACKAGES += \
-    SettingsSuperiorTheme \
-    SystemSuperiorTheme \
-    SystemUISuperiorTheme \
-    ContactsThemeSuperior \
-    DialerThemeSuperior \
-    FilesThemeSuperior
+    SettingsAncientTheme \
+    SystemAncientTheme \
+    SystemUIAncientTheme \
+    ContactsThemeAncient \
+    DialerThemeAncient \
+    FilesThemeAncient
 
 # Accents
 PRODUCT_PACKAGES += \

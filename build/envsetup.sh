@@ -40,7 +40,7 @@ function mka() {
 
 function repopick() {
     T=$(gettop)
-    $T/vendor/superior/build/tools/repopick.py $@
+    $T/vendor/ancient/build/tools/repopick.py $@
 }
 
 function fixup_common_out_dir() {

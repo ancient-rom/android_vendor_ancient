@@ -1,6 +1,6 @@
 bootstrap_go_package {
-    name: "soong-superior",
-    pkgPath: "superior/soong/android",
+    name: "soong-ancient",
+    pkgPath: "ancient/soong/android",
     srcs: [
         "android/variable.go",
     ],
@@ -8,7 +8,7 @@ bootstrap_go_package {
 
 bootstrap_go_package {
     name: "soong-custom-generator",
-    pkgPath: "superior/soong/generator",
+    pkgPath: "ancient/soong/generator",
     deps: [
         "blueprint",
         "blueprint-pathtools",

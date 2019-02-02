@@ -45,11 +45,11 @@ trap cleanup EXIT INT TERM ERR
 #
 # $1: device name
 # $2: vendor name
-# $3: SUPERIOR root directory
+# $3: ANCIENT root directory
 # $4: is common device - optional, default to false
 # $5: cleanup - optional, default to true
 # $6: custom vendor makefile name - optional, default to false
-#
+# update to make compatible with Ancient
 # Must be called before any other functions can be used. This
 # sets up the internal state for a new vendor configuration.
 #
@@ -66,15 +66,15 @@ function setup_vendor() {
         exit 1
     fi
 
-    export SUPERIOR_ROOT="$3"
-    if [ ! -d "$SUPERIOR_ROOT" ]; then
-        echo "\$SUPERIOR_ROOT must be set and valid before including this script!"
+    export ANCIENT_ROOT="$3"
+    if [ ! -d "$ANCIENT_ROOT" ]; then
+        echo "\$ANCIENT_ROOT must be set and valid before including this script!"
         exit 1
     fi
 
     export OUTDIR=vendor/"$VENDOR"/"$DEVICE"
-    if [ ! -d "$SUPERIOR_ROOT/$OUTDIR" ]; then
-        mkdir -p "$SUPERIOR_ROOT/$OUTDIR"
+    if [ ! -d "$ANCIENT_ROOT/$OUTDIR" ]; then
+        mkdir -p "$ANCIENT_ROOT/$OUTDIR"
     fi
 
     VNDNAME="$6"
@@ -82,9 +82,9 @@ function setup_vendor() {
         VNDNAME="$DEVICE"
     fi
 
-    export PRODUCTMK="$SUPERIOR_ROOT"/"$OUTDIR"/"$VNDNAME"-vendor.mk
-    export ANDROIDMK="$SUPERIOR_ROOT"/"$OUTDIR"/Android.mk
-    export BOARDMK="$SUPERIOR_ROOT"/"$OUTDIR"/BoardConfigVendor.mk
+    export PRODUCTMK="$ANCIENT_ROOT"/"$OUTDIR"/"$VNDNAME"-vendor.mk
+    export ANDROIDMK="$ANCIENT_ROOT"/"$OUTDIR"/Android.mk
+    export BOARDMK="$ANCIENT_ROOT"/"$OUTDIR"/BoardConfigVendor.mk
 
     if [ "$4" == "true" ] || [ "$4" == "1" ]; then
         COMMON=1
@@ -655,7 +655,7 @@ function get_file() {
 # Convert apk|jar .odex in the corresposing classes.dex
 #
 function oat2dex() {
-    local SUPERIOR_TARGET="$1"
+    local ANCIENT_TARGET="$1"
     local OEM_TARGET="$2"
     local SRC="$3"
     local TARGET=
@@ -663,8 +663,8 @@ function oat2dex() {
     local HOST="$(uname)"
 
     if [ -z "$BAKSMALIJAR" ] || [ -z "$SMALIJAR" ]; then
-        export BAKSMALIJAR="$SUPERIOR_ROOT"/vendor/superior/build/tools/smali/baksmali.jar
-        export SMALIJAR="$SUPERIOR_ROOT"/vendor/superior/build/tools/smali/smali.jar
+        export BAKSMALIJAR="$ANCIENT_ROOT"/vendor/ancient/build/tools/smali/baksmali.jar
+        export SMALIJAR="$ANCIENT_ROOT"/vendor/ancient/build/tools/smali/smali.jar
     fi
 
     if [ -z "$VDEXEXTRACTOR" ]; then
@@ -692,11 +692,11 @@ function oat2dex() {
         FULLY_DEODEXED=1 && return 0 # system is fully deodexed, return
     fi
 
-    if [ ! -f "$SUPERIOR_TARGET" ]; then
+    if [ ! -f "$ANCIENT_TARGET" ]; then
         return;
     fi
 
-    if grep "classes.dex" "$SUPERIOR_TARGET" >/dev/null; then
+    if grep "classes.dex" "$ANCIENT_TARGET" >/dev/null; then
         return 0 # target apk|jar is already odexed, return
     fi
 
@@ -719,7 +719,7 @@ function oat2dex() {
                 java -jar "$BAKSMALIJAR" deodex -o "$TMPDIR/dexout" -b "$BOOTOAT" -d "$TMPDIR" "$TMPDIR/$(basename "$OAT")"
                 java -jar "$SMALIJAR" assemble "$TMPDIR/dexout" -o "$TMPDIR/classes.dex"
             fi
-        elif [[ "$SUPERIOR_TARGET" =~ .jar$ ]]; then
+        elif [[ "$ANCIENT_TARGET" =~ .jar$ ]]; then
             JAROAT="$TMPDIR/system/framework/$ARCH/boot-$(basename ${OEM_TARGET%.*}).oat"
             JARVDEX="/system/framework/boot-$(basename ${OEM_TARGET%.*}).vdex"
             if [ ! -f "$JAROAT" ]; then
@@ -820,7 +820,7 @@ function extract() {
     local HASHLIST=( ${PRODUCT_COPY_FILES_HASHES[@]} ${PRODUCT_PACKAGES_HASHES[@]} )
     local COUNT=${#FILELIST[@]}
     local SRC="$2"
-    local OUTPUT_ROOT="$SUPERIOR_ROOT"/"$OUTDIR"/proprietary
+    local OUTPUT_ROOT="$ANCIENT_ROOT"/"$OUTDIR"/proprietary
     local OUTPUT_TMP="$TMPDIR"/"$OUTDIR"/proprietary
 
     if [ "$SRC" = "adb" ]; then
@@ -906,7 +906,7 @@ function extract() {
         local DEST="$OUTPUT_DIR/$FROM"
 
         if [ "$SRC" = "adb" ]; then
-            # Try SUPERIOR target first
+            # Try ANCIENT target first
             adb pull "/$TARGET" "$DEST"
             # if file does not exist try OEM target
             if [ "$?" != "0" ]; then
@@ -916,7 +916,7 @@ function extract() {
             # Try OEM target first
             if [ -f "$SRC/$FILE" ]; then
                 cp "$SRC/$FILE" "$DEST"
-            # if file does not exist try SUPERIOR target
+            # if file does not exist try ANCIENT target
             elif [ -f "$SRC/$TARGET" ]; then
                 cp "$SRC/$TARGET" "$DEST"
             else
@@ -997,7 +997,7 @@ function extract_firmware() {
     local FILELIST=( ${PRODUCT_COPY_FILES_LIST[@]} )
     local COUNT=${#FILELIST[@]}
     local SRC="$2"
-    local OUTPUT_DIR="$SUPERIOR_ROOT"/"$OUTDIR"/radio
+    local OUTPUT_DIR="$ANCIENT_ROOT"/"$OUTDIR"/radio
 
     if [ "$VENDOR_RADIO_STATE" -eq "0" ]; then
         echo "Cleaning firmware output directory ($OUTPUT_DIR).."

@@ -13,25 +13,25 @@
 # limitations under the License.
 
 PRODUCT_COPY_FILES += \
-    vendor/superior/prebuilt/fonts/gobold/Gobold.ttf:system/fonts/Gobold.ttf \
-    vendor/superior/prebuilt/fonts/gobold/Gobold-Italic.ttf:system/fonts/Gobold-Italic.ttf \
-    vendor/superior/prebuilt/fonts/gobold/GoboldBold.ttf:system/fonts/GoboldBold.ttf \
-    vendor/superior/prebuilt/fonts/gobold/GoboldBold-Italic.ttf:system/fonts/GoboldBold-Italic.ttf \
-    vendor/superior/prebuilt/fonts/gobold/GoboldThinLight.ttf:system/fonts/GoboldThinLight.ttf \
-    vendor/superior/prebuilt/fonts/gobold/GoboldThinLight-Italic.ttf:system/fonts/GoboldThinLight-Italic.ttf \
-    vendor/superior/prebuilt/fonts/neoneon/neoneon.ttf:system/fonts/Neoneon-Regular.ttf \
-    vendor/superior/prebuilt/fonts/roadrage/road_rage.ttf:system/fonts/RoadRage-Regular.ttf \
-    vendor/superior/prebuilt/fonts/snowstorm/snowstorm.ttf:system/fonts/Snowstorm-Regular.ttf \
-    vendor/superior/prebuilt/fonts/vcrosd/vcr_osd_mono.ttf:system/fonts/ThemeableFont-Regular.ttf \
-    vendor/superior/prebuilt/fonts/Shamshung/Shamshung.ttf:system/fonts/Shamshung.ttf \
-    vendor/superior/prebuilt/fonts/GoogleSans-Regular.ttf:system/fonts/GoogleSans-Regular.ttf \
-    vendor/superior/prebuilt/fonts/GoogleSans-Medium.ttf:system/fonts/GoogleSans-Medium.ttf \
-    vendor/superior/prebuilt/fonts/GoogleSans-MediumItalic.ttf:system/fonts/GoogleSans-MediumItalic.ttf \
-    vendor/superior/prebuilt/fonts/GoogleSans-Italic.ttf:system/fonts/GoogleSans-Italic.ttf \
-    vendor/superior/prebuilt/fonts/GoogleSans-Bold.ttf:system/fonts/GoogleSans-Bold.ttf \
-    vendor/superior/prebuilt/fonts/GoogleSans-BoldItalic.ttf:system/fonts/GoogleSans-BoldItalic.ttf \
-    vendor/superior/prebuilt/fonts/ABCThru/ABCThru.ttf:system/fonts/ABCThru.ttf \
-    vendor/superior/prebuilt/fonts/anurati/anurati_regular.ttf:system/fonts/anurati_regular.ttf \
-    vendor/superior/prebuilt/fonts/Joost/JoostAMillionaireNF.ttf:system/fonts/JoostAMillionaireNF.ttf \
-    vendor/superior/prebuilt/fonts/Locust/Locust_Resistance.ttf:system/fonts/Locust_Resistance.ttf \
-    vendor/superior/prebuilt/fonts/Wallpoet/Wallpoet_regular.ttf:system/fonts/Wallpoet_regular.ttf
+    vendor/ancient/prebuilt/fonts/gobold/Gobold.ttf:system/fonts/Gobold.ttf \
+    vendor/ancient/prebuilt/fonts/gobold/Gobold-Italic.ttf:system/fonts/Gobold-Italic.ttf \
+    vendor/ancient/prebuilt/fonts/gobold/GoboldBold.ttf:system/fonts/GoboldBold.ttf \
+    vendor/ancient/prebuilt/fonts/gobold/GoboldBold-Italic.ttf:system/fonts/GoboldBold-Italic.ttf \
+    vendor/ancient/prebuilt/fonts/gobold/GoboldThinLight.ttf:system/fonts/GoboldThinLight.ttf \
+    vendor/ancient/prebuilt/fonts/gobold/GoboldThinLight-Italic.ttf:system/fonts/GoboldThinLight-Italic.ttf \
+    vendor/ancient/prebuilt/fonts/neoneon/neoneon.ttf:system/fonts/Neoneon-Regular.ttf \
+    vendor/ancient/prebuilt/fonts/roadrage/road_rage.ttf:system/fonts/RoadRage-Regular.ttf \
+    vendor/ancient/prebuilt/fonts/snowstorm/snowstorm.ttf:system/fonts/Snowstorm-Regular.ttf \
+    vendor/ancient/prebuilt/fonts/vcrosd/vcr_osd_mono.ttf:system/fonts/ThemeableFont-Regular.ttf \
+    vendor/ancient/prebuilt/fonts/Shamshung/Shamshung.ttf:system/fonts/Shamshung.ttf \
+    vendor/ancient/prebuilt/fonts/GoogleSans-Regular.ttf:system/fonts/GoogleSans-Regular.ttf \
+    vendor/ancient/prebuilt/fonts/GoogleSans-Medium.ttf:system/fonts/GoogleSans-Medium.ttf \
+    vendor/ancient/prebuilt/fonts/GoogleSans-MediumItalic.ttf:system/fonts/GoogleSans-MediumItalic.ttf \
+    vendor/ancient/prebuilt/fonts/GoogleSans-Italic.ttf:system/fonts/GoogleSans-Italic.ttf \
+    vendor/ancient/prebuilt/fonts/GoogleSans-Bold.ttf:system/fonts/GoogleSans-Bold.ttf \
+    vendor/ancient/prebuilt/fonts/GoogleSans-BoldItalic.ttf:system/fonts/GoogleSans-BoldItalic.ttf \
+    vendor/ancient/prebuilt/fonts/ABCThru/ABCThru.ttf:system/fonts/ABCThru.ttf \
+    vendor/ancient/prebuilt/fonts/anurati/anurati_regular.ttf:system/fonts/anurati_regular.ttf \
+    vendor/ancient/prebuilt/fonts/Joost/JoostAMillionaireNF.ttf:system/fonts/JoostAMillionaireNF.ttf \
+    vendor/ancient/prebuilt/fonts/Locust/Locust_Resistance.ttf:system/fonts/Locust_Resistance.ttf \
+    vendor/ancient/prebuilt/fonts/Wallpoet/Wallpoet_regular.ttf:system/fonts/Wallpoet_regular.ttf
