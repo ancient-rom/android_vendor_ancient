@@ -17,7 +17,7 @@
 ANCIENT_MOD_VERSION = Mlehoy
 
 ifndef ANCIENT_BUILD_TYPE
-    ANCIENT_BUILD_TYPE := KW SUPER
+    ANCIENT_BUILD_TYPE := KWSUPER
 endif
 
 # Test Build Tag
@@ -41,7 +41,7 @@ PRODUCT_PACKAGES += \
 	
     endif
     ifneq ($(IS_OFFICIAL), true)
-       ANCIENT_BUILD_TYPE := KW SUPER
+       ANCIENT_BUILD_TYPE := KWSUPER
        $(error Device is not official "$(FOUND)")
     endif
 endif
