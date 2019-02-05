@@ -14,10 +14,10 @@
 # limitations under the License.
 
 #Ancient OS Versioning :
-ANCIENT_MOD_VERSION = Mlehoy
+ANCIENT_MOD_VERSION = CIVILIZATION
 
 ifndef ANCIENT_BUILD_TYPE
-    ANCIENT_BUILD_TYPE := KWSUPER
+    ANCIENT_BUILD_TYPE := PREHISTORIC
 endif
 
 # Test Build Tag
@@ -34,14 +34,14 @@ ifeq ($(ANCIENT_OFFICIAL), true)
    FOUND_DEVICE =  $(filter $(CURRENT_DEVICE), $(LIST))
     ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
       IS_OFFICIAL=true
-      ANCIENT_BUILD_TYPE := ORI
+      ANCIENT_BUILD_TYPE := PRIMEVAL
      
 PRODUCT_PACKAGES += \
     Updater
 	
     endif
     ifneq ($(IS_OFFICIAL), true)
-       ANCIENT_BUILD_TYPE := KWSUPER
+       ANCIENT_BUILD_TYPE := PREHISTORIC
        $(error Device is not official "$(FOUND)")
     endif
 endif
