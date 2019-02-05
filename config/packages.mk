@@ -54,15 +54,6 @@ PRODUCT_PACKAGES += \
     FilesThemeBlack \
     UpdaterBlack
 
-# Themes Ancient
-PRODUCT_PACKAGES += \
-    SettingsAncientTheme \
-    SystemAncientTheme \
-    SystemUIAncientTheme \
-    ContactsThemeAncient \
-    DialerThemeAncient \
-    FilesThemeAncient
-
 # Accents
 PRODUCT_PACKAGES += \
     AmberAccent \
