@@ -17,12 +17,7 @@
 ANCIENT_MOD_VERSION = CIVILIZATION
 
 ifndef ANCIENT_BUILD_TYPE
-    ANCIENT_BUILD_TYPE := PRIMEVAL
-endif
-
-# Test Build Tag
-ifeq ($(ANCIENT_TEST),true)
-    ANCIENT_BUILD_TYPE := DEVELOPER
+    ANCIENT_BUILD_TYPE := PREHISTORIC
 endif
 
 CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
@@ -41,7 +36,7 @@ PRODUCT_PACKAGES += \
 	
     endif
     ifneq ($(IS_OFFICIAL), true)
-       ANCIENT_BUILD_TYPE := PRIMEVAL
+       ANCIENT_BUILD_TYPE := PREHISTORIC
        $(error Device is not official "$(FOUND)")
     endif
 endif
