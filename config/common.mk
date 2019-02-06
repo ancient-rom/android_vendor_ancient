@@ -14,7 +14,7 @@
 # limitations under the License.
 
 
-PRODUCT_BRAND ?= Ancient Rom
+PRODUCT_BRAND ?= ANCIENTROM
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
@@ -143,10 +143,10 @@ $(call inherit-product, vendor/ancient/config/telephony.mk)
 
 # Some Apps
 PRODUCT_COPY_FILES += \
-    vendor/superior/prebuilt/common/apk/SubstratumKey.apk:system/priv-app/SubstratumKey/SubstratumKey.apk \
-    vendor/superior/prebuilt/common/priv-app/MatchmakerPrebuilt.apk:system/priv-app/MatchmakerPrebuilt/MatchmakerPrebuilt.apk \
-    vendor/superior/prebuilt/common/apk/MarkupGoogle.apk:system/app/MarkupGoogle/MarkupGoogle.apk \
-    vendor/superior/prebuilt/common/apk/WellbeingPrebuilt.apk:system/app/WellbeingPrebuilt/WellbeingPrebuilt.apk
+    vendor/ancient/prebuilt/common/apk/SubstratumKey.apk:system/priv-app/SubstratumKey/SubstratumKey.apk \
+    vendor/ancient/prebuilt/common/priv-app/MatchmakerPrebuilt.apk:system/priv-app/MatchmakerPrebuilt/MatchmakerPrebuilt.apk \
+    vendor/ancient/prebuilt/common/apk/MarkupGoogle.apk:system/app/MarkupGoogle/MarkupGoogle.apk \
+    vendor/ancient/prebuilt/common/apk/WellbeingPrebuilt.apk:system/app/WellbeingPrebuilt/WellbeingPrebuilt.apk
 
 # Packages
 include vendor/ancient/config/packages.mk
