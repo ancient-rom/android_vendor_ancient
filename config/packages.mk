@@ -30,12 +30,11 @@ PRODUCT_PACKAGES += \
     MintBrowser \
     SystemUpdates \
     WeatherClient \
-    Contacts \
-    Messaging \
+    Contact \
+    Message \
     Gboard \
-    Gmail \
-    Phone 
-
+    Phone \
+    File
 
 # Themes Dark
 PRODUCT_PACKAGES += \
