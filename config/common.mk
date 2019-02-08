@@ -131,8 +131,8 @@ PRODUCT_PACKAGES += \
 
 # Default ringtone/notification/alarm sounds
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.config.ringtone=Pubg.ogg,Pubg_Remix.ogg \
-    ro.config.notification_sound=Pikachu.ogg \
+    ro.config.ringtone=ringtone.ogg,ringtone.ogg \
+    ro.config.notification_sound=yoyoy.ogg \
     ro.config.alarm_alert=Helium.ogg
 
 # Bootanimation

@@ -27,9 +27,15 @@ PRODUCT_PACKAGES += \
     Stk \
     Recorder \
     Music \
-    ViaBrowser \
+    MintBrowser \
     SystemUpdates \
-    WeatherClient
+    WeatherClient \
+    Contacts \
+    Messaging \
+    Gboard \
+    Gmail \
+    Phone 
+
 
 # Themes Dark
 PRODUCT_PACKAGES += \

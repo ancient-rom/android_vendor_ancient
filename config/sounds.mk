@@ -82,6 +82,7 @@ PRODUCT_COPY_FILES += \
 	vendor/ancient/sounds/notifications/Messagetone.ogg:system/media/audio/notifications/Messagetone.ogg \
 	vendor/ancient/sounds/notifications/Note.ogg:system/media/audio/notifications/Note.ogg \
 	vendor/ancient/sounds/notifications/Pikachu.ogg:system/media/audio/notifications/Pikachu.ogg \
+	vendor/ancient/sounds/notifications/yoyoy.ogg:system/media/audio/notifications/yoyoy.ogg \
 	vendor/ancient/sounds/notifications/Ping.ogg:system/media/audio/notifications/Ping.ogg \
 	vendor/ancient/sounds/notifications/Rhea.ogg:system/media/audio/notifications/Rhea.ogg \
 	vendor/ancient/sounds/notifications/Spinner.ogg:system/media/audio/notifications/Spinner.ogg \
@@ -97,6 +98,7 @@ PRODUCT_COPY_FILES += \
 	vendor/ancient/sounds/ringtones/Lollipop.ogg:system/media/audio/ringtones/Lollipop.ogg \
 	vendor/ancient/sounds/ringtones/Pubg.ogg:system/media/audio/ringtones/Pubg.ogg \
 	vendor/ancient/sounds/ringtones/Pubg_Remix.ogg:system/media/audio/ringtones/Pubg_Remix.ogg \
+	vendor/ancient/sounds/ringtones/ringtone.ogg:system/media/audio/ringtones/ringtone.ogg \
 	vendor/ancient/sounds/ringtones/Pyxis.ogg:system/media/audio/ringtones/Pyxis.ogg \
 	vendor/ancient/sounds/ringtones/Shape_of_you.ogg:system/media/audio/ringtones/Shape_of_you.ogg \
 	vendor/ancient/sounds/ringtones/Zen.ogg:system/media/audio/ringtones/Zen.ogg \
