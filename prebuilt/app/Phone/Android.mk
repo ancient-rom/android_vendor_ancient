@@ -19,7 +19,7 @@ LOCAL_MODULE := Phone
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_CLASS := APPS
 LOCAL_BUILT_MODULE_STEM := package.apk
-LOCAL_OVERRIDES_PACKAGES := PhoneCommon
+LOCAL_OVERRIDES_PACKAGES := Dialer
 # Make sure the build system doesn't try to resign the APK
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_DEX_PREOPT := false
