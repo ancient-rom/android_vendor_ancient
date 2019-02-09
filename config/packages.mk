@@ -31,8 +31,7 @@ PRODUCT_PACKAGES += \
     SystemUpdates \
     WeatherClient \
     Contact \
-    Gboard \
-    File
+    Gboard
 
 # Themes Dark
 PRODUCT_PACKAGES += \
