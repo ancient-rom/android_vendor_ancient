@@ -31,9 +31,7 @@ PRODUCT_PACKAGES += \
     SystemUpdates \
     WeatherClient \
     Contact \
-    Message \
     Gboard \
-    Phone \
     File
 
 # Themes Dark

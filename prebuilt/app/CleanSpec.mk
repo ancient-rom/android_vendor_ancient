@@ -1,7 +1,5 @@
 $(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/app/Browser)
 $(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/app/Music)
 $(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/app/Contact)
-$(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/app/Message)
 $(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/app/Gboard)
-$(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/app/Phone)
 $(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/app/File)
