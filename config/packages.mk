@@ -156,6 +156,7 @@ PRODUCT_PACKAGES += \
     QStileDualToneCircle \
     QStileInkdrop \
     QStileCookie \
+    QStilesCircleOutline \
     QStileMountain \
     QStileNinja \
     QStilePokesign \
