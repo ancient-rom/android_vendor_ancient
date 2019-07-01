@@ -163,7 +163,9 @@ PRODUCT_PACKAGES += \
     QStileSquircle \
     QStileSquircleTrim \
     QStileTeardrop \
-    QStileWavey
+    QStileWavey \
+    QStileRoundedRect \
+    QStileSquare
 
 #Font package
 PRODUCT_PACKAGES += \
